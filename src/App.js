@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   return (
-    <div>
+    <div className="">
       <h1>Iris' Favorite Book</h1>
       <h2>Don't Make Me Think (Revisited) by Steve Krug, 2013</h2>
       <p>The book is about human–computer interaction and web usability.</p>
