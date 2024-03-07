@@ -1,4 +1,3 @@
-import img from './';
 import './raamat.css';
 import Raamat from './Raamat';
 
@@ -7,8 +6,9 @@ function App() {
     <div className="konteiner">
       <h1>Favorite Books</h1>
       <Raamat />
+      <pilt />
     </div>
-  );
+  )
 }
 
 export default App;
