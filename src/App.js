@@ -6,7 +6,6 @@ function App() {
     <div className="konteiner">
       <h1>Favorite Books</h1>
       <Raamat />
-      <pilt />
     </div>
   )
 }
