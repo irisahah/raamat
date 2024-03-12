@@ -11,7 +11,7 @@ function Raamat(props) {
                 <h3 className="book-author">Author: {props.author}</h3>
             </div>
             <div>
-                <button onClick={handleButtonClick}>View on Amazon</button>
+                <button className="button" onClick={handleButtonClick}>View on Amazon</button>
             </div>
         </div>
     );
