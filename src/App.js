@@ -23,7 +23,7 @@ function App() {
 */
 
 const raamatud = [
-  {title: "Don't Make Me Think (Revisited)", author: "Steve Krug", image: image1 },
+  {title: "Don't Make Me Think (Revisited)", author: "Steve Krug", image: image1},
   {title: "The 7 Habits of Highly Effective People", author: "Stephen Covey", image: image2},
   {title: "The Cat in the Hat", author: "Dr. Seuss", image: image3},
 ]
