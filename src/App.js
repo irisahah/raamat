@@ -33,7 +33,7 @@ function App() {
     <div className="container">
       <RaamatuteLoetelu raamatud={raamatud} />
       <div>
-      <div>Raamatute loetelu</div>
+      <div>TOP BOOKS</div>
       {raamatud.map((raamat)=>{
         return (
           <Raamat name={raamat.title} author={raamat.author} image={raamat.image} />
