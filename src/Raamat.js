@@ -1,11 +1,10 @@
 import { useState } from 'react'
 
-function Raamat(props) {
-    const handleButtonClick = () => {
-        window.open(props.link, '_blank');
-    };
+function Raamat({ title, author, image, readBook, setReadBook, link }) {
+    if (!title) {
+        title = 'Teadmata'
+    }
 
-    const [readBook, setReadBook] = useState(0)
     const add = () => {
         setReadBook(readBook + 1)
     }
@@ -15,14 +14,16 @@ function Raamat(props) {
 
     return (
         <div className="book">
-            <div><img src={props.image} className="book-image" alt="Book" />
+            <div><img src={image} className="book-image" alt="Book" />
             </div>
             <div className="book-title">
-                <h2>Title: {props.title}</h2>
-                <h3 className="book-author">Author: {props.author}</h3>
+                <h2>Title: {title}</h2>
+                <h3 className="book-author">Author: {author}</h3>
             </div>
             <div>
-                <button className="buttonAmazon" onClick={handleButtonClick}>View on Amazon</button>
+                <a href={link} target="_blank" rel="noopener noreferrer">
+                    <button className="buttonAmazon">View on Amazon</button>
+                </a>
             </div>
             <div>
                 <button className="buttonPlus" onClick={add}>+</button>

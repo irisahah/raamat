@@ -1,18 +1,20 @@
-const pickBook = () => { 
-    console.log()
-}
+function BookList({ raamatud, setActiveBook }) {
+    const pickBook = (raamatIndex) => {
+        console.log('book' + raamatIndex)
+        setActiveBook(raamatIndex)
+    }
 
-function BookList({raamatud}) {
-    const bookList = raamatud.map((raamat) => {
+    const bookList = raamatud.map((raamat, index) => {
         return (
-            <li onClick= {pickBook}>{raamat.title}</li>
+            <li key={index} onClick={() => pickBook(index)}>{raamat.title} : {raamat.readBook}</li>
         )
     })
 
     return (
         <div>
             <p className='booklist-heading'>BOOK LIST</p>
-            <ul>{bookList}</ul>
+            <ul className='booklist-list'>{bookList}</ul>
+            <button type="button" className="button-add-book">Add Book</button>
         </div>
     )
 }
