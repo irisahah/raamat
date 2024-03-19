@@ -8,7 +8,6 @@ import raamat3 from './img/raamat3.jpg';
 
 
 
-
 function App() {
   const [readBookRaamat1, setReadBookRaamat1] = useState(0);
   const [readBookRaamat2, setReadBookRaamat2] = useState(0);
@@ -23,15 +22,13 @@ function App() {
   const [activeBook, setActiveBook] = useState(0);
 
 
-
-
   return (
     <div className="container">
       <div className="book-list">
         <BookList raamatud={raamatud} setActiveBook={setActiveBook} />
       </div>
       <div className="book-details">
-        <div className="heading">TOP BOOKS</div>
+        <div className="book-details-heading">TOP BOOKS</div>
         <Raamat
           title={raamatud[activeBook].title}
           author={raamatud[activeBook].author}

@@ -1,3 +1,6 @@
+import NewBook from './NewBook';
+import React, { useState } from 'react';
+
 function BookList({ raamatud, setActiveBook }) {
     const pickBook = (raamatIndex) => {
         console.log('book' + raamatIndex)
@@ -10,11 +13,22 @@ function BookList({ raamatud, setActiveBook }) {
         )
     })
 
+    const addNewBook = (title, author, image) => {
+        const newBook = {
+          title, author, image
+        }
+        console.log(newBook)
+      }
+
     return (
         <div>
-            <p className='booklist-heading'>BOOK LIST</p>
+            <p className='heading'>BOOK LIST</p>
             <ul className='booklist-list'>{bookList}</ul>
-            <button type="button" className="button-add-book">Add Book</button>
+            <p className='heading'>ADD NEW BOOK</p>
+            <div>
+                <NewBook addNewBook={addNewBook} />
+            </div>
+
         </div>
     )
 }
