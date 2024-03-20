@@ -15,19 +15,19 @@ function NewBook({addNewBook}) {
     return (
         <div className='row'>
             <input
-                className='col-4'
+                className='newBook-field'
                 placeholder='Title'
                 value={title}
                 onChange={(event) => setTitle(event.target.value)}
             />
             <input
-                className='col-4'
+                className='newBook-field'
                 placeholder='Author'
                 value={author}
                 onChange={(event) => setAuthor(event.target.value)}
             />
             <input
-                className='col-4'
+                className='newBook-field'
                 placeholder='Image URL'
                 value={image}
                 onChange={(event) => setImage(event.target.value)}
