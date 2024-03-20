@@ -2,7 +2,10 @@ import { useState } from 'react'
 
 function Raamat({ title, author, image, readBook, setReadBook, link }) {
     if (!title) {
-        title = 'Teadmata'
+        title = 'Unknown'
+    }
+    if (!author) {
+        author = 'Unknown';
     }
 
     const add = () => {

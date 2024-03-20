@@ -1,24 +1,17 @@
 import NewBook from './NewBook';
-import React, { useState } from 'react';
+import React from 'react';
 
-function BookList({ raamatud, setActiveBook }) {
+function BookList({ raamatud, setActiveBook, addNewBook }) {
     const pickBook = (raamatIndex) => {
-        console.log('book' + raamatIndex)
-        setActiveBook(raamatIndex)
-    }
+        console.log('book' + raamatIndex);
+        setActiveBook(raamatIndex);
+    };
 
     const bookList = raamatud.map((raamat, index) => {
         return (
             <li key={index} onClick={() => pickBook(index)}>{raamat.title} : {raamat.readBook}</li>
-        )
-    })
-
-    const addNewBook = (title, author, image) => {
-        const newBook = {
-          title, author, image
-        }
-        console.log(newBook)
-      }
+        );
+    });
 
     return (
         <div>
@@ -28,9 +21,8 @@ function BookList({ raamatud, setActiveBook }) {
             <div>
                 <NewBook addNewBook={addNewBook} />
             </div>
-
         </div>
-    )
+    );
 }
 
 export default BookList;

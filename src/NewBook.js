@@ -28,7 +28,7 @@ function NewBook({addNewBook}) {
             />
             <input
                 className='col-4'
-                placeholder='Image'
+                placeholder='Image URL'
                 value={image}
                 onChange={(event) => setImage(event.target.value)}
             />
