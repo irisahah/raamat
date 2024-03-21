@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 function Raamat({ title, author, image, readBook, setReadBook, link }) {
     if (!title) {
         title = 'Unknown'
